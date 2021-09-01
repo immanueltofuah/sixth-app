@@ -38,16 +38,17 @@ function App () {
 return (
     <div>
 
-        <form onSubmit={(e) => handleSubmit (e)}>
-            <input name="firstname" type="text" value={firstName}
+        <form className="fields" onSubmit={(e) => handleSubmit (e)}>
+        <h1>Function Form</h1>
+            <input placeholder="First Name" name="firstname" type="text" value={firstName}
             onChange={(e) => handleFirstName(e)} />
-           <input name="surname" type="text" value={surName}
+           <input  placeholder="Sur Name" name="surname" type="text" value={surName}
            onChange={(e) => handleSurName(e)} />
-           <input name="email" type="email" value={email}
+           <input  placeholder="Email" name="email" type="email" value={email}
            onChange={(e) => handleEmail(e)} />
-           <input name="password" type="password" value={password}
+           <input  placeholder="Password" name="password" type="password" value={password}
            onChange={(e) => handlePassword(e)} />
-           <input type="submit" />
+           <input className="but" type="submit" />
 
         </form>
     </div>

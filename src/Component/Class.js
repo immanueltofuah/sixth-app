@@ -1,4 +1,5 @@
 import React, { useState} from "react";
+import '../App.css'
 class App extends React.Component {
 
     constructor() {
@@ -30,11 +31,12 @@ class App extends React.Component {
       return (
         <div>
           <form onSubmit={(e) => this.handleSubmit(e)}>
-            <input name="firstname" type="text" value={this.state.firstname} onChange={(e) => this.handleFirstName(e)} />
-            <input name="surname" type="text" value={this.state.surname} onChange={(e) => this.handleSurName(e)} />
-            <input name="email" type="email" value={this.state.email} onChange={(e) => this.handleEmail(e)} />
-            <input name="password" type="password" value={this.state.password} onChange={(e) => this.handlePassword(e)} />
-            <input type="submit" />
+     <h1>Class Form</h1>
+            <input placeholder="First Name" name="firstname" type="text" value={this.state.firstname} onChange={(e) => this.handleFirstName(e)} />
+            <input placeholder="Sur Name" name="surname" type="text" value={this.state.surname} onChange={(e) => this.handleSurName(e)} />
+            <input placeholder="Email" name="email" type="email" value={this.state.email} onChange={(e) => this.handleEmail(e)} />
+            <input placeholder="Password" name="password" type="password" value={this.state.password} onChange={(e) => this.handlePassword(e)} />
+            <input className="but" type="submit" />
           </form>
         </div>
       );
